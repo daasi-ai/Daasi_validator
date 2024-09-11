@@ -41,5 +41,6 @@ After installation, run the validator with your hotkey and coldkey:
 
 ```bash
 # Run validator (replace 'your_hotkey' and 'your_coldkey' with your actual keys)
-pm2 start validators/validator.py --interpreter python3 -- --netuid 77 --subtensor.network test --wallet.name your_coldkey --wallet.hotkey your_hotkey --logging.debug
+export PYTHONPATH=$PYTHONPATH:/root/Daasi_validator
+pm2 start validators/validator.py --interpreter python3 -- --netuid 36 --subtensor.network test --wallet.name your_coldkey --wallet.hotkey your_hotkey --logging.debug
 ```
